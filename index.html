@@ -1,37 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      height: 100vh;
+      background: url(./images/pattern-background-desktop.svg) no-repeat, hsl(225, 100%, 94%);
+      background-size: contain;
+
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .card {
+      width: 350px;
+      border-radius: 20px;
+      text-align: center;
+      background-color: white;
+    }
+    .card img {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card__details {
+      width: 80%;
+      margin: 50px auto;
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .card__details p.advt {
+      color: hsl(224, 23%, 55%);
+      margin-bottom: 20px;
+    }
+
+    .card__details .pricePlan__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card__details .pricePlan__wrapper p {
+      color: hsl(224, 23%, 55%);
+      margin-left: -50px;
+    }
+    .card__details .pricePlan__wrapper p span {
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+    }
+    .card__details .pricePlan__wrapper img {
+      width: 44px;
+    }
+    .card__details .pricePlan__wrapper a {
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .btn-Payment {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 20px hsla(245, 75%, 52%, 0.5);
+      margin: 50px 0 30px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .btn-Cancel {
+      color: hsl(224, 23%, 55%);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 50px;
+    }
+    .btn-Cancel:hover {
+      color: hsl(223, 47%, 23%);
+    }
   </style>
 </head>
+
 <body>
 
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="card">
+    <img src="./images/illustration-hero.svg" alt="">
+    <div class="card__details">
+      <h1>Order Summary</h1>
+      <p class="advt">You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!</p>
+      <div class="pricePlan__wrapper">
+        <img src="./images/icon-music.svg" alt="">
+        <p><span>Annual Plan</span><br>
+          $59.99/year</p>
+        <a href="#">Change</a>
+      </div>
+      <a href="#" class="btn-Payment">Proceed to Payment</a>
+      <a href="#" class="btn-Cancel">Cancel Order</a>
+    </div>
   </div>
 </body>
+
 </html>
